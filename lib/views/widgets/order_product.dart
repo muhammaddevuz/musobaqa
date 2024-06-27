@@ -32,21 +32,21 @@ class OrderProduct extends StatelessWidget {
                 children: [
                   Text(
                     "Amoun: ${cart.count}",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.w500,
                       color: Colors.green,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Container(
                     height: 25,
                     width: 2,
                     color: Colors.grey,
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Text(
                     "Total: \$${cart.count * cart.price}",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.w500,
                       color: Colors.green,
                     ),
@@ -56,7 +56,7 @@ class OrderProduct extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 20)
+        const SizedBox(height: 20)
       ],
     );
   }

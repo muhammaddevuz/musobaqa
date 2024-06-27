@@ -37,23 +37,20 @@ class AdminItem extends StatelessWidget {
                 style:
                     const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              
             ],
           ),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               IconButton(
-                onPressed: () async {
-                  final response = await Navigator.push(
+                onPressed: ()  {
+                  Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const EditProduct(),
+                        builder: (context) => EditProduct(
+                          product: product,
+                        ),
                       ));
-                  // if (response != null) {
-                  //   productController.editProduct(product.id, response['title'],
-                  //       double.parse(response['price']));
-                  // }
                 },
                 icon: const Icon(
                   Icons.edit,
@@ -72,7 +69,7 @@ class AdminItem extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 20)
+        const SizedBox(height: 20)
       ],
     );
   }

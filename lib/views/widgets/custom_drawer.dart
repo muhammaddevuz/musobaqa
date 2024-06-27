@@ -29,7 +29,7 @@ class CustomDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Firspage(),
+                    builder: (context) => const Firspage(),
                   ));
             },
             title: const Text(
@@ -44,7 +44,7 @@ class CustomDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AdminPanel(),
+                    builder: (context) => const AdminPanel(),
                   ));
             },
             title: const Text(
@@ -59,7 +59,7 @@ class CustomDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => OrdersScreen(),
+                    builder: (context) => const OrdersScreen(),
                   ));
             },
             title: const Text(

@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:musobaqa/controllers/product_controller.dart';
-import 'package:musobaqa/models/product.dart';
 import 'package:provider/provider.dart';
 
-// ignore: must_be_immutable
-class EditProduct extends StatefulWidget {
-  Product product;
-  EditProduct({super.key, required this.product});
+class AddProduct extends StatefulWidget {
+  const AddProduct({
+    super.key,
+  });
 
   @override
-  State<EditProduct> createState() => _EditProductState();
+  State<AddProduct> createState() => _AddProductState();
 }
 
-class _EditProductState extends State<EditProduct> {
+class _AddProductState extends State<AddProduct> {
   String title = '';
 
   String price = '';
@@ -29,9 +28,6 @@ class _EditProductState extends State<EditProduct> {
 
   @override
   void initState() {
-    title = widget.product.title;
-    price = widget.product.price.toString();
-    imageUrl = widget.product.imageUrl;
     setState(() {});
     super.initState();
   }
@@ -123,14 +119,14 @@ class _EditProductState extends State<EditProduct> {
               _add();
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
-                productController.editProduct(
-                    widget.product.id, title, double.parse(price), imageUrl);
+                productController.addProduct(
+                    title, double.parse(price), imageUrl);
                 Navigator.pop(context);
               }
             },
             style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue, foregroundColor: Colors.white),
-            child: const Text("O'zgartirish"))
+            child: const Text("Qo'shish"))
       ],
     );
   }

@@ -185,7 +185,7 @@ class ProductDetailsScreen extends StatelessWidget {
                                 Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => PayScreen(),
+                                      builder: (context) => const PayScreen(),
                                     ));
                               },
                               child: const Text(

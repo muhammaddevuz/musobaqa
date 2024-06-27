@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:musobaqa/controllers/cart_controller.dart';
 import 'package:musobaqa/controllers/product_controller.dart';
 import 'package:musobaqa/views/screens/firspage.dart';
-import 'package:musobaqa/views/screens/product_details_screen.dart';
-import 'package:musobaqa/views/screens/third_screen.dart';
 import 'package:provider/provider.dart';
 
 void main(List<String> args) {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -30,7 +28,7 @@ class _MyAppState extends State<MyApp> {
         }),
       ],
       builder: (context, child) {
-        return MaterialApp(
+        return const MaterialApp(
           debugShowCheckedModeBanner: false,
           home: Firspage(),
         );

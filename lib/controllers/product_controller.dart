@@ -115,4 +115,23 @@ class ProductController extends ChangeNotifier {
     }
     return count;
   }
+
+  void editProduct(
+      String id, String newTitle, double newPrice, String newImage) {
+    for (var i = 0; i < _list.length; i++) {
+      if (_list[i].id == id) {
+        _list[i].title = newTitle;
+        _list[i].price = newPrice;
+        _list[i].imageUrl = newImage;
+      }
+    }
+    notifyListeners();
+  }
+
+  void addProduct(String title, double price, String image) {
+    _list.add(
+      Product(category: "living", id: UniqueKey().toString(), imageUrl: image, price: price, title: title, isLiked: false)
+    );
+    notifyListeners();
+  }
 }

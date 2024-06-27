@@ -16,19 +16,19 @@ class _CadrWidgetState extends State<CadrWidget> {
   Widget build(BuildContext context) {
     final cardController = context.watch<CartController>();
     return Padding(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: Stack(
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(
+              const Text(
                 "My Card",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               Expanded(
                 child: ListView.builder(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   itemCount: cardController.list.length,
                   itemBuilder: (context, index) {
                     final product = cardController.list[index];
@@ -63,7 +63,7 @@ class _CadrWidgetState extends State<CadrWidget> {
                                     icon: const Icon(CupertinoIcons.minus)),
                                 Text(
                                   product.count.toString(),
-                                  style: TextStyle(fontWeight: FontWeight.w700),
+                                  style: const TextStyle(fontWeight: FontWeight.w700),
                                 ),
                                 IconButton(
                                     onPressed: () {
@@ -76,10 +76,10 @@ class _CadrWidgetState extends State<CadrWidget> {
                                   width: 2,
                                   color: Colors.grey,
                                 ),
-                                SizedBox(width: 10),
+                                const SizedBox(width: 10),
                                 Text(
                                   "\$${product.count * product.price}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontWeight: FontWeight.w500,
                                     color: Colors.green,
                                   ),
@@ -93,7 +93,7 @@ class _CadrWidgetState extends State<CadrWidget> {
                   },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 110,
               )
             ],
@@ -103,7 +103,7 @@ class _CadrWidgetState extends State<CadrWidget> {
               right: 0,
               child: Row(
                 children: [
-                  Text(
+                  const Text(
                     "Total: ",
                     style: TextStyle(
                       fontSize: 20,
@@ -112,7 +112,7 @@ class _CadrWidgetState extends State<CadrWidget> {
                   ),
                   Text(
                     "\$${cardController.totalPrice()}",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w500,
                       color: Colors.green,
@@ -129,7 +129,7 @@ class _CadrWidgetState extends State<CadrWidget> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ProductDetailsScreen(),
+                      builder: (context) => const ProductDetailsScreen(),
                     ));
               },
               child: Container(
@@ -138,7 +138,7 @@ class _CadrWidgetState extends State<CadrWidget> {
                   color: Colors.green,
                 ),
                 height: 70,
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Checkout Cart',
                     style: TextStyle(color: Colors.white, fontSize: 20),

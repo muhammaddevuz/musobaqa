@@ -13,15 +13,15 @@ class OrdersScreen extends StatelessWidget {
     final cardController = context.watch<CartController>();
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             "Orders",
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
         ),
-        drawer: CustomDrawer(),
+        drawer: const CustomDrawer(),
         body: ListView.builder(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           itemCount: cardController.order.length,
           itemBuilder: (context, index) {
             Cart cart = cardController.order[index];
